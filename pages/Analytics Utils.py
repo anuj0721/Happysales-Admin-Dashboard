@@ -79,7 +79,8 @@ def avg_roleplay_per_user():
 
 
 if 'authentication_status' in st.session_state and st.session_state["authentication_status"]:
-    # authenticator.logout()
+    authenticator = st.session_state['authenticator']
+    authenticator.logout()
     avg_usr_per_ws()
     avg_pros_per_ws()
     avg_pros_per_usr()

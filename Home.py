@@ -7,7 +7,6 @@ import streamlit_authenticator as stauth
 st.set_page_config(page_title="Home Page!!", page_icon=":house:")
 
 def main():
-    st.write("hello")
     with open('./config.yaml') as file:
         config = yaml.load(file, Loader=SafeLoader)
 
@@ -20,6 +19,7 @@ def main():
         config['pre-authorized']
     )
 
+    st.session_state['authenticator'] = authenticator
 
     if not st.session_state.get("authentication_status"):
         option = st.sidebar.radio("Choose an option:", ("Login", "Sign Up"))

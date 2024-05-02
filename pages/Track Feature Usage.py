@@ -58,6 +58,8 @@ def features_usage():
     st.plotly_chart(fig)
 
 if st.session_state["authentication_status"]:
+    authenticator = st.session_state['authenticator']
+    authenticator.logout()
     features_usage()
 
 else:

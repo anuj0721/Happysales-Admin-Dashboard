@@ -86,6 +86,8 @@ def signups_by_week():
     st.plotly_chart(fig)
 
 if st.session_state["authentication_status"]:
+    authenticator = st.session_state['authenticator']
+    authenticator.logout()
     signups_by_week()
 
 else:

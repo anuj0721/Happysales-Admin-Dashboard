@@ -265,6 +265,8 @@ def workspace_users_activity(target_workspace_id):
     st.dataframe(table_df)
 
 if st.session_state["authentication_status"]:
+    authenticator = st.session_state['authenticator']
+    authenticator.logout()
     extract_workspace_id()
 
 else:

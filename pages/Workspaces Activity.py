@@ -134,6 +134,8 @@ def workspaces_sorted_by_activity():
     st.dataframe(df)
 
 if st.session_state["authentication_status"]:
+    authenticator = st.session_state['authenticator']
+    authenticator.logout()
     workspaces_sorted_by_activity()
 
 else:
