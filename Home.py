@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit import write
 # import yaml
 # from yaml.loader import SafeLoader
-import streamlit_authenticator as stauth
+# import streamlit_authenticator as stauth
 
 st.set_page_config(page_title="Home Page!!", page_icon=":house:")
 
